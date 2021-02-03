@@ -20,6 +20,37 @@
     <meta http-equiv="Pragma" content="no-cache" />
 </head>
 
+<style>
+    html{
+        height:100%;
+        background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        background-repeat:no-repeat;
+    }
+
+    body{
+        height: 100%;
+        background:none;
+    }
+
+
+    .removeDiv{
+        width: 80%;
+        height: 50%;
+        text-align:center;
+        margin: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+
+    td{
+        text-align:center;
+        background-color: blanchedalmond;
+    }
+</style>
 <body>
 
 <%@include file="../common/IncludeTop.jsp"%>
@@ -42,28 +73,25 @@
                 <th>List Price</th>
                 <th>&nbsp</th>
             </tr>
-             <c:forEach var="item" items="${sessionScope.itemList}">
+            <c:forEach var="item" items="${sessionScope.itemList}">
                 <tr>
                     <td>
                         <a href="viewItem?itemId=${item.itemId}">${item.itemId}</a>
                     </td>
                     <td>
-                        ${item.productId}
+                            ${item.productId}
                     </td>
                     <td>
-                        ${item.attribute1}${item.attribute2}${item.attribute3}${item.attribute4}${item.attribute5}
+                            ${item.attribute1}${item.attribute2}${item.attribute3}${item.attribute4}${item.attribute5}
                     </td>
                     <td>
                         <fmt:formatNumber value="${item.listPrice}" pattern="$#,##0.00"/>
                     </td>
                     <td>
-                        <a class="Button" href="addItemToCart?workingItemId=${item.itemId}">Add to Cart</a>
+                        <a id="AddBt" href="addItemToCart?workingItemId=${item.itemId}">Add to Cart</a>
                     </td>
                 </tr>
-             </c:forEach>
-            <tr>
-                <td></td>
-            </tr>
+            </c:forEach>
         </table>
     </div>
 
@@ -73,6 +101,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 

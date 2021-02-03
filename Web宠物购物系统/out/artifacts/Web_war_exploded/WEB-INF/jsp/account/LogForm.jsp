@@ -37,66 +37,96 @@
         table{
             margin:auto;
         }
+
+        html{
+            height:1090px;
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            background-repeat:no-repeat;
+        }
+
+        body{
+            height: 100%;
+            background:none;
+        }
+
+
+        .removeDiv{
+            width: 80%;
+            height: 50%;
+            text-align:center;
+            margin: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+
+        td{
+            text-align:center;
+            background-color: blanchedalmond;
+        }
     </style>
 
 </head>
 <body>
-    <%@include file="../common/IncludeTop.jsp"%>
+<%@include file="../common/IncludeTop.jsp"%>
 
-    <div id="record">
-        <table>
-            <tr>
-                <h3>购物车纪录</h3>
-            </tr>
-            <tr>
-                <th>itemId</th>
-                <th>quantity</th>
-                <th>instock</th>
-                <th>total</th>
-            </tr>
+<div id="record">
+    <table>
+        <tr>
+            <h3>购物车纪录</h3>
+        </tr>
+        <tr>
+            <th>itemId</th>
+            <th>quantity</th>
+            <th>instock</th>
+            <th>total</th>
+        </tr>
 
-            <%
-                //展示购物纪录
-                Log log=(Log)session.getAttribute("log");
-                for(int i=0;i<log.getCarts().size();i++){
-                    out.write("<tr>");
-                    out.write("<td>"+log.getCarts().get(i).getItemId()+"</td>");
-                    out.write("<td>"+log.getCarts().get(i).getQuantity()+"</td>");
-                    out.write("<td>"+log.getCarts().get(i).getInstock()+"</td>");
-                    out.write("<td>"+log.getCarts().get(i).getTotal()+"</td>");
-                    out.write("</tr>");
-                }
-            %>
-        </table>
+        <%
+            //展示购物纪录
+            Log log=(Log)session.getAttribute("log");
+            for(int i=0;i<log.getCarts().size();i++){
+                out.write("<tr>");
+                out.write("<td>"+log.getCarts().get(i).getItemId()+"</td>");
+                out.write("<td>"+log.getCarts().get(i).getQuantity()+"</td>");
+                out.write("<td>"+log.getCarts().get(i).getInstock()+"</td>");
+                out.write("<td>"+log.getCarts().get(i).getTotal()+"</td>");
+                out.write("</tr>");
+            }
+        %>
+    </table>
 
-        <table>
-            <tr>
-                <h3>订单纪录</h3>
-            </tr>
-            <tr>
-                <th>orderid</th>
-                <th>orderdate</th>
-                <th>itemId</th>
-                <th>quantity</th>
-                <th>total</th>
-                <th>totalprice</th>
-            </tr>
-            <%
-                //展示订单纪录
-                for(int i=0;i<log.getOrders().size();i++){
-                    out.write("<tr>");
-                    out.write("<td>"+log.getOrders().get(i).getOrderId()+"</td>");
-                    out.write("<td>"+log.getOrders().get(i).getOrderdate()+"</td>");
-                    out.write("<td>"+log.getOrders().get(i).getItemId()+"</td>");
-                    out.write("<td>"+log.getOrders().get(i).getQuantity()+"</td>");
-                    out.write("<td>"+log.getOrders().get(i).getTotal()+"</td>");
-                    out.write("<td>"+log.getOrders().get(i).getTotalPrice()+"</td>");
-                    out.write("</tr>");
-                }
-            %>
-        </table>
-    </div>
+    <table>
+        <tr>
+            <h3>订单纪录</h3>
+        </tr>
+        <tr>
+            <th>orderid</th>
+            <th>orderdate</th>
+            <th>itemId</th>
+            <th>quantity</th>
+            <th>total</th>
+            <th>totalprice</th>
+        </tr>
+        <%
+            //展示订单纪录
+            for(int i=0;i<log.getOrders().size();i++){
+                out.write("<tr>");
+                out.write("<td>"+log.getOrders().get(i).getOrderId()+"</td>");
+                out.write("<td>"+log.getOrders().get(i).getOrderdate()+"</td>");
+                out.write("<td>"+log.getOrders().get(i).getItemId()+"</td>");
+                out.write("<td>"+log.getOrders().get(i).getQuantity()+"</td>");
+                out.write("<td>"+log.getOrders().get(i).getTotal()+"</td>");
+                out.write("<td>"+log.getOrders().get(i).getTotalPrice()+"</td>");
+                out.write("</tr>");
+            }
+        %>
+    </table>
+</div>
 
-    <%@include file="../common/IncludeBottom.jsp"%>
+<%@include file="../common/IncludeBottom.jsp"%>
 </body>
 </html>

@@ -4,7 +4,6 @@ import org.csu.myproject.domain.ItemHistory;
 import org.csu.myproject.persistence.DBUtil;
 import org.csu.myproject.persistence.ItemHistoryDAO;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

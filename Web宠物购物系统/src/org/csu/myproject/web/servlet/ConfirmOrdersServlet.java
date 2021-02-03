@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 public class ConfirmOrdersServlet extends HttpServlet {
     private static final String CONFIRM_ORDERS="/WEB-INF/jsp/order/ConfirmOrder.jsp";
     private static final String ERROR="/WEB-INF/jsp/common/Error.jsp";
-    private static final String SHIPPING_FORM="/WEB-INF/jsp/order/ShippingForm.jsp";
+    //    private static final String SHIPPING_FORM="/WEB-INF/jsp/order/ShippingForm.jsp";
     private String cardType;
     private String creditCard;
     private String expiryDate;
@@ -37,7 +37,6 @@ public class ConfirmOrdersServlet extends HttpServlet {
         java.util.Date utilDate=new java.util.Date();
         orderDate=new Date(utilDate.getTime());
         manifestOrderDate=df.format(utilDate);
-
 
         cardType=req.getParameter("cardType");
         creditCard=req.getParameter("creditCard");
@@ -64,8 +63,8 @@ public class ConfirmOrdersServlet extends HttpServlet {
         session.setAttribute("ConfirmOrder_billZip",billZip);
         session.setAttribute("ConfirmOrder_billCountry",billCountry);
         session.setAttribute("manifestOrderDate",manifestOrderDate);
-        session.setAttribute("orderDate",new java.sql.Date(utilDate.getTime()));
-        if(shippingAddressRequired==null)
+        session.setAttribute("orderDate",new Date(utilDate.getTime()));
+        if(shippingAddressRequired == null)
         {
             session.setAttribute("ConfirmOrder_shipToFirstName",billToFirstName);
             session.setAttribute("ConfirmOrder_shipToLastName",billToLastName);
@@ -75,12 +74,25 @@ public class ConfirmOrdersServlet extends HttpServlet {
             session.setAttribute("ConfirmOrder_shipState",billState);
             session.setAttribute("ConfirmOrder_shipZip",billZip);
             session.setAttribute("ConfirmOrder_shipCountry",billCountry);
-            req.getRequestDispatcher(CONFIRM_ORDERS).forward(req,resp);
+        }else{
+            String shipToFirstName=req.getParameter("shipToFirstName");
+            String shipToLastName=req.getParameter("shipToLastName");
+            String shipAddress1=req.getParameter("shipAddress1");
+            String shipAddress2=req.getParameter("shipAddress2");
+            String shipCity=req.getParameter("shipCity");
+            String shipState=req.getParameter("shipState");
+            String shipZip=req.getParameter("shipZip");
+            String shipCountry=req.getParameter("shipCountry");
+            session.setAttribute("ConfirmOrder_shipToFirstName",shipToFirstName);
+            session.setAttribute("ConfirmOrder_shipToLastName",shipToLastName);
+            session.setAttribute("ConfirmOrder_shipAddress1",shipAddress1);
+            session.setAttribute("ConfirmOrder_shipAddress2",shipAddress2);
+            session.setAttribute("ConfirmOrder_shipCity",shipCity);
+            session.setAttribute("ConfirmOrder_shipState",shipState);
+            session.setAttribute("ConfirmOrder_shipZip",shipZip);
+            session.setAttribute("ConfirmOrder_shipCountry",shipCountry);
         }
-        if(shippingAddressRequired.equals("true"))
-        {
-            req.getRequestDispatcher(SHIPPING_FORM).forward(req,resp);
-        }
+        req.getRequestDispatcher(CONFIRM_ORDERS).forward(req,resp);
     }
 
     @Override

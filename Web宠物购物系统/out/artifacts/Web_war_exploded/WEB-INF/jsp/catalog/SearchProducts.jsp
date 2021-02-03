@@ -7,7 +7,7 @@
 <head>
     <link rel="StyleSheet" href="css/jpetstore.css" type="text/css"
           media="screen" />
-
+    <link rel="StyleSheet" href="css/searchProduct.css" type="text/css" media="screen" />
     <meta name="generator"
           content="HTML Tidy for Linux/x86 (vers 1st November 2002), see www.w3.org" />
     <title>JPetStore Demo</title>
@@ -18,6 +18,7 @@
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="Pragma" content="no-cache" />
+    <script type="text/javascript" src="/js/jquery-3.5.1.js"></script>
 </head>
 
 <body>

@@ -217,7 +217,7 @@ body>#PoweredBy {
 }
 
 #Banner {
-  width: 69%;
+  width: 99%;
   height: 9ex;
   margin: 0ex 0ex 0ex 0ex;
   padding: 0ex 0ex 0ex 0ex;
@@ -256,7 +256,9 @@ body>#Banner {
   margin: 0;
   padding: 1ex;
   color: #333;
-  background-color: #FFF;
+  background-image:url('../images/background1.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
   border-width: 1ex 0ex 2ex 0px;
   border-style: solid;
   border-color: #fff;
@@ -264,13 +266,18 @@ body>#Banner {
 
 #Sidebar {
   float: left;
-  background:inherit;
+  /*background:inherit;*/
   width: 30%;
+}
+
+#scroll{
+  float: right;
+  width: 40%;
 }
 
 #MainImage {
   float: left;
-  background:inherit;
+  /*background:inherit;*/
   text-align:center;
   width: 50%;
 }

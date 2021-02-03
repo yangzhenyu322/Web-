@@ -34,25 +34,25 @@
 
     <div id="Logo">
         <div id="LogoContent">
-            <a href="main"><img src="../images/logo-topbar.gif" /></a>
+            <a href="main"><img src="../../images/logo-topbar.gif" /></a>
         </div>
     </div>
 
     <div id="Menu">
         <div id="MenuContent">
             <a href="viewCart"><img align="middle" name="img_cart"
-                                    src="../images/cart.gif" /></a> <img align="middle"
-                                                                         src="../images/separator.gif" /> <a
-                href="../account/SignonForm.jsp">Sign In</a> <a href="#">Sign
-            Out</a> <img align="middle" src="../images/separator.gif" /> <a
-                href="../account/EditAccountForm.jsp">My Account</a> <img align="middle"
-                                                                           src="../images/separator.gif" /> <a href="../help.jsp">?</a>
+                                    src="../../images/cart.gif" /></a> <img align="middle"
+                                                                            src="../../images/separator.gif" /> <a
+                href="SignonForm.jsp">Sign In</a> <a href="#">Sign
+            Out</a> <img align="middle" src="../../images/separator.gif" /> <a
+                href="EditAccountForm.jsp">My Account</a> <img align="middle"
+                                                               src="../../images/separator.gif" /> <a href="../help.jsp">?</a>
         </div>
     </div>
 
     <div id="Search">
         <div id="SearchContent">
-            <form action="../catalog/SearchProducts.jsp" method="post">
+            <form action="../../catalog/SearchProducts.jsp" method="post">
                 <input type="text" name="keyword" size="14" /> <input type="submit"
                                                                       name="searchProducts" value="Search" />
             </form>
@@ -60,16 +60,16 @@
     </div>
 
     <div id="QuickLinks">
-        <a href="../catalog/Category.jsp"><img
-                src="../images/sm_fish.gif" /></a> <img src="../images/separator.gif" />
-        <a href="../catalog/Category.jsp"><img
-                src="../images/sm_dogs.gif" /></a> <img src="../images/separator.gif" />
-        <a href="../catalog/Category.jsp"><img
-                src="../images/sm_reptiles.gif" /></a> <img
-            src="../images/separator.gif" /> <a href="../catalog/Category.jsp"><img
-            src="../images/sm_cats.gif" /></a> <img src="../images/separator.gif" />
-        <a href="../catalog/Category.jsp"><img
-                src="../images/sm_birds.gif" /></a>
+        <a href="../../catalog/Category.jsp"><img
+                src="../../images/sm_fish.gif" /></a> <img src="../../images/separator.gif" />
+        <a href="../../catalog/Category.jsp"><img
+                src="../../images/sm_dogs.gif" /></a> <img src="../../images/separator.gif" />
+        <a href="../../catalog/Category.jsp"><img
+                src="../../images/sm_reptiles.gif" /></a> <img
+            src="../../images/separator.gif" /> <a href="../../catalog/Category.jsp"><img
+            src="../../images/sm_cats.gif" /></a> <img src="../../images/separator.gif" />
+        <a href="../../catalog/Category.jsp"><img
+                src="../../images/sm_birds.gif" /></a>
     </div>
 
 </div>
@@ -126,7 +126,7 @@
 
     <div id="Catalog">
 
-        <form action="../catalog/Main.jsp" method="post" name="userInfo" id="userInfo">
+        <form action="../../catalog/Main.jsp" method="post" name="userInfo" id="userInfo">
 
             <h3>User Information</h3>
 
@@ -142,6 +142,7 @@
                     <td>New password:</td>
                     <td><input type="password" name="password" /></td>
                 </tr>
+
                 <tr>
                     <td>Repeat password:</td>
                     <td><input type="password" name="repeatedPassword"/></td>
@@ -170,3 +171,4 @@
 
 </body>
 </html>
+

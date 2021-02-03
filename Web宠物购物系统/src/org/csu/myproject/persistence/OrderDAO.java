@@ -1,6 +1,5 @@
 package org.csu.myproject.persistence;
 
-import org.csu.myproject.domain.Cart;
 import org.csu.myproject.domain.CartItem;
 import org.csu.myproject.domain.Order;
 

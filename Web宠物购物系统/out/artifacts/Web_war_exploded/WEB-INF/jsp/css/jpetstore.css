@@ -256,7 +256,10 @@ body>#Banner {
   margin: 0;
   padding: 1ex;
   color: #333;
-  background-color: #FFF;
+  /*background-color: #FFF;*/
+  /*background-image:url('../images/background1.jpg');*/
+  /*background-repeat:no-repeat;*/
+  /*background-size:100% 100%;*/
   border-width: 1ex 0ex 2ex 0px;
   border-style: solid;
   border-color: #fff;

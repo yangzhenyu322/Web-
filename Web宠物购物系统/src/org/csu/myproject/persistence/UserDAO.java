@@ -11,7 +11,6 @@ public interface UserDAO {
 
     boolean getUserByUsername(String username);
 
-
     Profile findProfileById(String id);
 
     //修改用户资料

@@ -43,9 +43,9 @@ public class CatalogService {
         return productDAO.getProduct(productId);
     }
 
-    public List<Product> searchProductList(String keywords)
+    public List<Product> searchProductList(String keyword)
     {
-        return productDAO.searchProductList(keywords.toLowerCase());
+        return productDAO.searchProductList("%" + keyword.toLowerCase() + "%");
     }
 
     public List<Item>getItemListByProduct(String productId)

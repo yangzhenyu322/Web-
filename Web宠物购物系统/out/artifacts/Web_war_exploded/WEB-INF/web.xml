@@ -260,4 +260,45 @@
         <servlet-name>ItemHistoryServlet</servlet-name>
         <url-pattern>/ItemHistory</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserNameExistServlet</servlet-name>
+        <servlet-class>org.csu.myproject.web.servlet.UsernameExistServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserNameExistServlet</servlet-name>
+        <url-pattern>/usernameExist</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchProductEngineServlet</servlet-name>
+        <servlet-class>org.csu.myproject.web.servlet.SearchProductEngineServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchProductEngineServlet</servlet-name>
+        <url-pattern>/searchProductEngine</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FloatCategoryServlet</servlet-name>
+        <servlet-class>org.csu.myproject.web.servlet.FloatCategoryServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FloatCategoryServlet</servlet-name>
+        <url-pattern>/floatCategory</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateCartJSServlet</servlet-name>
+        <servlet-class>org.csu.myproject.web.servlet.UpdateCartJSServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+    <servlet-name>UpdateCartJSServlet</servlet-name>
+        <url-pattern>/updateCartJSServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

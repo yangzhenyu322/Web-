@@ -1,7 +1,6 @@
 package org.csu.myproject.persistence.impl;
 
 import org.csu.myproject.domain.Product;
-
 import org.csu.myproject.persistence.DBUtil;
 import org.csu.myproject.persistence.ProductDAO;
 
@@ -15,7 +14,7 @@ public class ProductDAOImpl implements ProductDAO {
 
     private static final String GET_PRODUCT_LIST_CATEGORY="SELECT productId,category AS categoryId,name,descn AS description FROM product WHERE category=?";
     private static final String GET_PRODUCT="SELECT productId,category AS categoryId,name,descn AS description FROM product WHERE productId=?";
-    private static final String SEARCH_PRODUCT_LIST="SELECT productId,category AS categoryId,name,descn AS description FROM product WHERE descn like ?";
+    private static final String SEARCH_PRODUCT_LIST="SELECT productId,category AS categoryId,name,descn AS description FROM product WHERE lower(name) like ?";
     @Override
     public List<Product> getProductListByCategory(String categoryId) {
         List<Product>productList=new ArrayList<>();
@@ -75,7 +74,7 @@ public class ProductDAOImpl implements ProductDAO {
         try{
             Connection connection= DBUtil.getConnection();
             PreparedStatement preparedStatement=connection.prepareStatement(SEARCH_PRODUCT_LIST);
-            preparedStatement.setString(1,"%"+keywords.toLowerCase()+"%");
+            preparedStatement.setString(1,keywords);
             ResultSet resultSet=preparedStatement.executeQuery();
             while(resultSet.next())
             {

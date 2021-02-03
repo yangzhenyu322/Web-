@@ -70,7 +70,7 @@ public class ViewOrdersServlet extends HttpServlet {
         billCountry=session.getAttribute("ConfirmOrder_billCountry").toString();
         manifestOrderDate=session.getAttribute("manifestOrderDate").toString();
 
-        orderDate= (java.sql.Date) session.getAttribute("orderDate");
+        orderDate= (Date) session.getAttribute("orderDate");
 
         shipToFirstName=session.getAttribute("ConfirmOrder_shipToFirstName").toString();
         shipToLastName=session.getAttribute("ConfirmOrder_shipToLastName").toString();

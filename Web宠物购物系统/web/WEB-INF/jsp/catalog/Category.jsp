@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 杨震宇
-  Date: 2020/11/10
-  Time: 19:35
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -25,6 +18,40 @@
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="Pragma" content="no-cache" />
+    <style>
+        html{
+            height: 100%;
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            background-repeat:no-repeat;
+        }
+
+        body{
+            height: 100%;
+            background:none;
+        }
+
+
+        .removeDiv{
+            width: 80%;
+            height: 50%;
+            text-align:center;
+            margin: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .removeDiv>a:hover{
+            color: red;
+        }
+
+        td{
+            text-align:center;
+            background-color: blanchedalmond;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,7 +66,7 @@
 
     <div id="Catalog">
 
-        <h2>${sessionScope.category.name}</h2>
+        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:30px;color: aquamarine">${sessionScope.category.name}</h2>
 
         <table>
             <tr>
@@ -64,6 +91,3 @@
 
 </body>
 </html>
-
-
-
